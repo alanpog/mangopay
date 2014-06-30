@@ -1,4 +1,5 @@
 {-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE ConstraintKinds #-}
 -- | utility functions for Yesod, that are used in the site but are not really generic enough to be put in the library
 module Base.Util where
 

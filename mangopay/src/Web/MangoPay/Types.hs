@@ -58,10 +58,10 @@ instance ToJSON Credentials  where
 -- | from json as per MangoPay format
 instance FromJSON Credentials where
     parseJSON (Object v) =Credentials <$>
-                         v .: "ClientId" <*>
-                         v .: "Name" <*>
-                         v .: "Email" <*>
-                         v .: "Passphrase"
+                         v .:  "ClientId" <*>
+                         v .:  "Name" <*>
+                         v .:  "Email" <*>
+                         v .:? "Passphrase"
     parseJSON _= fail "Credentials"
 
 -- | get client id in ByteString form
